@@ -1,0 +1,40 @@
+1.) Uploadovati "arduino_code.cpp" na arduino mikrokontroler.
+
+2.) Pokrenuti skriptu "main.py" komandom "sudo ./venv/bin/python3.7 main.py"
+
+3.) Pritisnuti taster na arduinu (LED bi se trebala ukljuciti kao indikator da je sve u redu). Zapoceti pracenje izlaznog signala.
+
+4.) Nakon sto se LED ugasi pokrenuti skriptu "process_results.py" komandom "python3.7 process_results.py X", gdje je X vrijednost frekvencije za koju je izvrseno snimanje.
+	Npr., za 0.05Hz, komanda glasi: "python3.7 process_results.py 0.05".
+
+5.) Sa grafika ocitati vrijednost faznog kasnjenja izlaznog signala u odnosu na ulazni.
+
+6.) Ponoviti korake 2-5 za sve vrijednosti frekvencije koje su zadane u tabeli.
+
+7.) Editovati skriptu "bode_plot.py" i to na nacin da se samo u liniji 9 u vektor "phi" unesu vrijednosti
+	faznog kasnjenja koje ste ocitali u prethodnim koracima.
+
+8.) Pokrenuti skriptu "bode_plot.py" komandom "python3.7 bode_plot.py"
+
+(Pokretanje skripti podrazumijeva da je kreiran venv sa python3.7 interpreterom koji sadrzi sve potrebne biblioteke).
+
+-----------------------------------------------------------------------------------------------------------
+
+1.) Upload "arduino_code.cpp" to the arduino microcontroller.
+
+2.) Run the "main.py" script using the command "sudo ./venv/bin/python3.7 main.py"
+
+3.) Press the push button connected to the arduino (the LED should turn on as an indicator that everything is OK). Start adjusting the potentiometer to track the input reference sine-wave.
+
+4.) After the LED has turned off, run the script "process_results.py" using the command "python3.7 process_results.py X". X should be replaced by the value of frequency for which the tracking was completed.
+	e.g. for f=0.05Hz, the command is "python3.7 process_results.py 0.05"
+
+5.) Read the phase lag of the output signal with respect to the input signal.
+
+6.) Repeat steps 2-5 for all frequency values provided in the table.
+
+7.) Edit the script "bode_plot.py" by adding the observed values of the phase lag for all frequency into the 	vector "phi" (line 9).
+
+8.) Run "bode_plot.py" using "python3.7 bode_plot.py"
+
+(Running these scripts assumes that the required python packages are installed for python version 3.7.)

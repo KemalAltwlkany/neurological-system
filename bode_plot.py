@@ -4,7 +4,10 @@ import plotly.graph_objs as go
 
 if __name__ == '__main__':
     w = np.array([0.05, 0.1, 0.2, 0.3, 0.5, 1, 2])*2*np.pi
+
+    # EDIT:
     phi = -np.array([1.176, 7.7, 14.964, 21.822, 56.2, 69, 95.6])
+    
     d = {
         'x': w,
         'y': phi
