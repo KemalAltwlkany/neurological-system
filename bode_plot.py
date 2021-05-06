@@ -12,15 +12,6 @@ if __name__ == '__main__':
     pix = px.scatter(d, x='x', y='y', trendline="ols")
     pix = pix.data[1]
     fig = go.Figure()
-    # fig.add_trace(go.Scatter(mode='lines+markers', x=w, y=phi,
-    #                          line={
-    #                              'width': 5
-    #                          },
-    #                          marker={
-    #                              'size': 15,
-    #                              'color': 'blue',
-    #                          },))
-    fig.add_trace(pix)
     fig.add_trace(go.Scatter(mode='markers', x=w, y=phi,
                              marker={
                                  'size': 15,

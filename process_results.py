@@ -26,29 +26,12 @@ if __name__ == "__main__":
 		'color': 'darkorchid',
 		}))
 
+	# plot reference data
 	fig.add_trace(go.Scatter(x=t, y=np.array(ref_values), mode='lines', name='Input: reference sine-wave',
 		line={
 		'width': 5,
 		'color': 'yellow',
 		}))
-
-	# label hand zeros
-	#hand_zeros_x, hand_zeros_y = t[hand_values == 0], hand_values[hand_values == 0]
-	#fig.add_trace(go.Scatter(x=hand_zeros_x, y=hand_zeros_y, mode='markers', marker={
-	#	'symbol': 'circle',
-	#	'size': 15,
-	#	'color': 'red',
-	#	},
-	#	name='Manual zeros'))
-
-	# label reference zeros
-	#ref_zeros_x, ref_zeros_y = t[ref_values == 0], ref_values[ref_values == 0]
-	#fig.add_trace(go.Scatter(x=ref_zeros_x, y=ref_zeros_y, mode='markers', marker={
-	#	'symbol': 'square',
-	#	'size': 15,
-	#	'color': 'green',
-	#	},
-	#	name='Reference zeros'))
 
 	fig.update_layout(
 		title={
@@ -62,18 +45,4 @@ if __name__ == "__main__":
     	legend_title="<b>Legend</b>",
     )
 
-	# find pairs of hand and reference zeros
-	# delta_t = []
-	#delta_phi = []
-	#indices_to_skip = [0, 1, 2, 4, 5, 6, 300]
-	#for ind, hand_zero in enumerate(hand_zeros_x):
-	#	if ind in indices_to_skip:
-	#		continue
-	#	index = np.argmin(np.absolute(ref_zeros_x - hand_zero))
-	#	delta_t.append(np.absolute(ref_zeros_x[index] - hand_zero))
-	#	delta_phi.append(360.0 * f * delta_t[-1])
-	#print('All dt = ', delta_t)
-	#print('All phase lag = ', delta_phi)
-	#print('Average delay = ', np.average(delta_t))
-	#print('Average phase lag = ', np.average(delta_phi))
 	fig.show()
