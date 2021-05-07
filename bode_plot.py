@@ -12,15 +12,18 @@ if __name__ == '__main__':
         'x': w,
         'y': phi
     }
-    pix = px.scatter(d, x='x', y='y', trendline="ols")
-    pix = pix.data[1]
+    #pix = px.scatter(d, x='x', y='y', trendline="ols")
+    #pix = pix.data[1]
+    #print(pix)
     fig = go.Figure()
+    #fig.add_trace(pix)
+    #fig.add_trace(go.Scatter(x=w, y=pix.y))
     fig.add_trace(go.Scatter(mode='markers', x=w, y=phi,
                              marker={
                                  'size': 15,
                                  'color': 'blue',
                                  'symbol': 'star-triangle-up'
-                             },))
+                             }, trendline='ols'),)
     fig.update_xaxes(type='log')
     fig.update_layout(
         title={

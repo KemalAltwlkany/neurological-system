@@ -1,6 +1,7 @@
 import serial as serial
 import time as time
 import pickle as pickle
+#from serial import Serial
 
 arduino = serial.Serial(port='/dev/ttyACM0', baudrate=115200, timeout=20)
 ref_values = [0] * 5000
