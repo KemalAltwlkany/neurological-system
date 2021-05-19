@@ -10,12 +10,13 @@ if __name__ == "__main__":
 	t = np.linspace(0, 10, 1000)
 	ref = 2.5*np.sin(t) + 2.5
 	
-	user = 2.5*np.ones(1000)
+	#user = 2.5*np.ones(1000)
 
 	#user = np.concatenate((2.5*np.ones(250), ref[0:150], 5*np.ones(600)))
 
+	#user = np.concatenate(([2.5]*300, ref[0:150], [5]*100, ref[150:450], [0]*150))
 
-	user = np.concatenate(([2.5]*300, ref[0:150], [5]*100, ref[150:450], [0]*150))
+	user = np.concatenate((2.5*np.ones(30), ref))
 
 	fig = go.Figure()
 
